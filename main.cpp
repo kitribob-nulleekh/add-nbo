@@ -46,7 +46,6 @@ int main(int argc, char* argv[]) {
         uint32_t firstNum, secondNum, result;
 
         firstNum = getData(argv[1]);
-
         secondNum = getData(argv[2]);
 
         result = firstNum + secondNum;
