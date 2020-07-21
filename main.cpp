@@ -14,6 +14,7 @@ int printTitle() {
     printf("                         Developed by nulLeeKH@KITRI.BoB\n\n\n");
     return 0;
 }
+
 int printUsage(char *dir) {
     printf("\n\n\nUsage: %sadd-nbo <filename1> <filename2>\n", dir);
     return 0;
