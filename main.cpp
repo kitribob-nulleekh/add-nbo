@@ -25,12 +25,16 @@ uint32_t getData(char *filePath) {
 	uint32_t num;
 
     file = fopen(filePath, "rb");
-    fread(&num, 1, sizeof(uint32_t), file);
+    size_t dataSize = fread(&num, 1, sizeof(uint32_t), file);
     fclose(file);
 
-    num = htonl(num);
-
-    return num;
+    if (dataSize == 4) {
+	    num = htonl(num);
+	    return num;
+    } else {
+	    printf("\nError: %s is too small to be treated as 0x00000000\n", filePath);
+    	return 0;
+    }
 }
 
 int main(int argc, char* argv[]) {
