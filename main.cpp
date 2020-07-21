@@ -33,7 +33,7 @@ int main(int argc, char* argv[]) {
         printf("\nINFO: Strat reading data from frist file\n"); //debugLog
         firstFile = fopen(argv[1], "rb");
         printf("INFO: First file has been opened | firstFile=%p\n", firstFile); //debugLog
-        fread(&firstNum, sizeof(uint32_t), 1, firstFile);
+        fread(&firstNum, 1, sizeof(uint32_t), firstFile);
         printf("INFO: Data has been readed | firstNum=0x%x\n", firstNum); //debugLog
         fclose(firstFile);
         printf("INFO: First file has been closed\n\n\n"); //debugLog
@@ -41,7 +41,7 @@ int main(int argc, char* argv[]) {
         printf("\nINFO: Strat reading data from second file\n"); //debugLog
         secondFile = fopen(argv[2], "rb");
         printf("INFO: Second file has been opened | secondFile=%p\n", secondFile); //debugLog
-        fread(&secondNum, sizeof(uint32_t), 1, secondFile);
+        fread(&secondNum, 1, sizeof(uint32_t), secondFile);
         printf("INFO: Data has been readed | secondNum=0x%x\n", secondNum); //debugLog
         fclose(secondFile);
         printf("INFO: Second file has been closed\n\n\n"); //debugLog
