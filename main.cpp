@@ -51,7 +51,7 @@ int main(int argc, char* argv[]) {
 
         result = firstNum + secondNum;
 
-        printf("\n\n\n  0x%0.8x\n+ 0x%0.8x\n------------\n= 0x%0.8x\n\n\n", firstNum, secondNum, result);
+        printf("\n\n\n  0x%08x\n+ 0x%08x\n------------\n= 0x%08x\n\n\n", firstNum, secondNum, result);
     }
     return 0;
 }
